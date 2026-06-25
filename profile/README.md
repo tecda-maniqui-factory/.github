@@ -23,7 +23,7 @@ graph TD
         D["🗃️ Base de Datos (MariaDB / MySQL)"]
     end
 
-    A -- "Consume REST JSON (Puerto 8081)" --> B
+    A -- "Consume REST JSON (Puerto 8082)" --> B
     B -- "Conexión Resiliente (Puerto 3307)" --> D
     C -- "Mapeo de Endpoints" --> B
 ```
@@ -41,7 +41,7 @@ La solución está organizada de forma simétrica en **tres repositorios indepen
 
 ### 2. 🔌 [tp-maniqui-backend](https://github.com/tecda-maniqui-factory/tp-maniqui-backend)
 * **Responsabilidad:** Capa de Negocio y Servicios (API REST de Express, controladores modulares y especificación formal de endpoints).
-* **Puerto local:** `8081` *(para evitar colisión con el puente local de WhatsApp)*.
+* **Puerto local:** `8082` *(para evitar colisión con el puente local de WhatsApp)*.
 * **Documentación destacada:**
   * [docs/openapi.yaml](https://github.com/tecda-maniqui-factory/tp-maniqui-backend/blob/main/docs/openapi.yaml) *(Especificación OpenAPI 3.0)*.
   * [docs/api_tests.http](https://github.com/tecda-maniqui-factory/tp-maniqui-backend/blob/main/docs/api_tests.http) *(Suite interactiva de REST Client para pruebas rápidas)*.
