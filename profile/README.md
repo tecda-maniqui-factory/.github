@@ -68,6 +68,7 @@ docker compose up -d
 ```bash
 git clone https://github.com/tecda-maniqui-factory/tp-maniqui-backend.git
 cd tp-maniqui-backend
+cp .env.example .env  # Ya viene configurado por defecto para apuntar al puerto 8082 y DB en el 3307
 pnpm install
 pnpm dev
 ```
@@ -76,6 +77,7 @@ pnpm dev
 ```bash
 git clone https://github.com/tecda-maniqui-factory/tp-maniqui-frontend.git
 cd tp-maniqui-frontend
+cp .env.example .env  # Ya viene configurado por defecto para apuntar a VITE_API_URL=http://localhost:8082
 pnpm install
 pnpm dev
 ```
