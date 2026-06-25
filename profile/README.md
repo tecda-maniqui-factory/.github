@@ -37,19 +37,25 @@ La solución está organizada de forma simétrica en **tres repositorios indepen
 ### 1. 🗃️ [tp-maniqui-db](https://github.com/tecda-maniqui-factory/tp-maniqui-db)
 * **Responsabilidad:** Capa de Datos (DDL, triggers, stored procedures, vistas analíticas de producción y entornos rápidos con Docker Compose).
 * **Puerto local:** `3307` *(exponiendo MariaDB o MySQL)*.
-* **Documentación destacada:** [docs/README.md](https://github.com/tecda-maniqui-factory/tp-maniqui-db/blob/main/docs/README.md) *(manual de base de datos y scripts)*.
+* **Documentación destacada:**
+  * [docs/README.md](https://github.com/tecda-maniqui-factory/tp-maniqui-db/blob/main/docs/README.md) *(Manual de base de datos y scripts)*.
+  * [docs/DATABASE_LOGIC.md](https://github.com/tecda-maniqui-factory/tp-maniqui-db/blob/main/docs/DATABASE_LOGIC.md) *(Lógica programable, SPs y automatizaciones)*.
+  * [docs/tp-maniqui-docker.md](https://github.com/tecda-maniqui-factory/tp-maniqui-db/blob/main/docs/tp-maniqui-docker.md) *(Despliegue y volúmenes con Docker)*.
 
 ### 2. 🔌 [tp-maniqui-backend](https://github.com/tecda-maniqui-factory/tp-maniqui-backend)
 * **Responsabilidad:** Capa de Negocio y Servicios (API REST de Express, controladores modulares y especificación formal de endpoints).
 * **Puerto local:** `8082` *(para evitar colisión con el puente local de WhatsApp)*.
 * **Documentación destacada:**
-  * [docs/openapi.yaml](https://github.com/tecda-maniqui-factory/tp-maniqui-backend/blob/main/docs/openapi.yaml) *(Especificación OpenAPI 3.0)*.
-  * [docs/api_tests.http](https://github.com/tecda-maniqui-factory/tp-maniqui-backend/blob/main/docs/api_tests.http) *(Suite interactiva de REST Client para pruebas rápidas)*.
+  * [openapi.yaml](https://github.com/tecda-maniqui-factory/tp-maniqui-backend/blob/main/openapi.yaml) *(Especificación OpenAPI 3.0 de la API)*.
+  * [tests/integration/api_tests.http](https://github.com/tecda-maniqui-factory/tp-maniqui-backend/blob/main/tests/integration/api_tests.http) *(Suite interactiva REST Client para pruebas)*.
 
 ### 3. 🎨 [tp-maniqui-frontend](https://github.com/tecda-maniqui-factory/tp-maniqui-frontend)
 * **Responsabilidad:** Capa de Presentación (Dashboard de control administrativo responsivo Bento Box con estética Obsidian Glassmorphism).
 * **Puerto local:** `5173`.
-* **Documentación destacada:** [docs/README.md](https://github.com/tecda-maniqui-factory/tp-maniqui-frontend/blob/main/docs/README.md) *(manual de diseño visual y componentes)*.
+* **Documentación destacada:**
+  * [docs/README.md](https://github.com/tecda-maniqui-factory/tp-maniqui-frontend/blob/main/docs/README.md) *(Manual de diseño visual y componentes)*.
+  * [docs/ROLES_Y_OPERACIONES.md](https://github.com/tecda-maniqui-factory/tp-maniqui-frontend/blob/main/docs/ROLES_Y_OPERACIONES.md) *(Manual de operaciones y perfiles RBAC)*.
+  * [docs/ARCHITECTURE.md](https://github.com/tecda-maniqui-factory/tp-maniqui-frontend/blob/main/docs/ARCHITECTURE.md) *(Detalles de la arquitectura modular)*.
 
 ---
 
