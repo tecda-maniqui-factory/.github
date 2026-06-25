@@ -83,5 +83,18 @@ pnpm dev
 ```
 
 ---
+
+## 🔑 Credenciales de Prueba para el Evaluador
+
+El sistema viene preconfigurado en la base de datos con usuarios de prueba que poseen diferentes niveles de acceso (RBAC):
+
+| Rol / Nivel de Acceso | Usuario | Contraseña | Permisos Destacados |
+| :--- | :--- | :--- | :--- |
+| **Gerente de Producción** | `gerente` | `gerente` | Crear modelos, ver reportes analíticos de rentabilidad y stock. |
+| **Vendedor** | `vendedor` | `vendedor` | Registrar ventas y consultas generales de catálogo. |
+| **Operario** | `operario` | `operario` | Consulta básica y operaciones de planta. |
+| **Administrador General** | `admin_pablo` | `tecda2026` | Control y gestión completa. |
+
+---
 > [!TIP]
 > **Gestión de dependencias:** Todos los subproyectos de Node en esta organización tienen como estándar mandatorio y exclusivo el uso de **`pnpm`** para garantizar instalaciones veloces y optimización de caché en disco.
