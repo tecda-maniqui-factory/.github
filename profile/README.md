@@ -59,31 +59,50 @@ La solución está organizada de forma simétrica en **tres repositorios indepen
 
 ---
 
-## ⚡ Guía de Inicio Rápido para Desarrolladores
+## ⚡ Guía de Inicio Rápido (Clonado y Despliegue Local)
 
-Para levantar el ecosistema completo localmente en tu entorno Manjaro Linux con ZSH:
+Sigue esta secuencia ordenada paso a paso para clonar y levantar el ecosistema completo de forma local en tu máquina:
 
-### Paso 1: Levantar la Base de Datos
+### Paso 1: Clonar y Levantar la Base de Datos (MariaDB/MySQL)
+Clona el repositorio del módulo de base de datos, navega a la carpeta de configuración de Docker y levanta el contenedor expuesto por defecto en el puerto **`3307`**:
 ```bash
+# 1. Clonar el repositorio de base de datos
 git clone https://github.com/tecda-maniqui-factory/tp-maniqui-db.git
 cd tp-maniqui-db/docker/mariadb
+
+# 2. Iniciar el contenedor de MariaDB
 docker compose up -d
 ```
+*Nota: La base de datos se inicializará y cargará de forma automatizada toda la estructura de tablas y datos semilla de prueba (seeds).*
 
-### Paso 2: Levantar el Servidor Backend
+### Paso 2: Clonar, Configurar y Levantar el Servidor Backend (API)
+Abre otra terminal, clona el repositorio del backend, copia el archivo de variables de entorno para inicializar la configuración preestablecida, instala las dependencias mediante `pnpm` y levanta el servidor Express en el puerto **`8082`**:
 ```bash
+# 1. Clonar el repositorio del backend
 git clone https://github.com/tecda-maniqui-factory/tp-maniqui-backend.git
 cd tp-maniqui-backend
-cp .env.example .env  # Ya viene configurado por defecto para apuntar al puerto 8082 y DB en el 3307
+
+# 2. Crear archivo de entorno a partir de la plantilla preconfigurada
+cp .env.example .env
+# (Configurado por defecto para apuntar al puerto de la API 8082 y a la DB en el 3307)
+
+# 3. Instalar dependencias e iniciar el servidor en modo desarrollo
 pnpm install
 pnpm dev
 ```
 
-### Paso 3: Levantar el Cliente Frontend
+### Paso 3: Clonar, Configurar y Levantar el Cliente Frontend (React)
+Abre una tercera terminal, clona el repositorio del frontend, crea su archivo de variables de entorno para enlazarse con la API, instala las dependencias e inicia el servidor de desarrollo de Vite:
 ```bash
+# 1. Clonar el repositorio del frontend
 git clone https://github.com/tecda-maniqui-factory/tp-maniqui-frontend.git
 cd tp-maniqui-frontend
-cp .env.example .env  # Ya viene configurado por defecto para apuntar a VITE_API_URL=http://localhost:8082
+
+# 2. Crear archivo de entorno para apuntar a la API
+cp .env.example .env
+# (Configurado por defecto para apuntar a VITE_API_URL=http://localhost:8082)
+
+# 3. Instalar dependencias e iniciar la aplicación web
 pnpm install
 pnpm dev
 ```
