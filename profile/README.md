@@ -91,7 +91,6 @@ El sistema viene preconfigurado en la base de datos con usuarios de prueba que p
 | Rol / Nivel de Acceso | Usuario | Contraseña | Permisos Destacados |
 | :--- | :--- | :--- | :--- |
 | **Gerente de Producción** (Admin) | `gerente` | `gerente` | Acceso completo de administrador, creación de modelos, reportes analíticos de rentabilidad y stock. |
-| **Gerente de Producción** (Admin) | `admin_pablo` | `tecda2026` | Acceso completo de administrador (Usuario original de desarrollo, mismo rol que `gerente`). |
 | **Vendedor** | `vendedor` | `vendedor` | Registrar ventas y consultas generales de catálogo. |
 | **Operario** | `operario` | `operario` | Consulta básica y operaciones de planta. |
 
